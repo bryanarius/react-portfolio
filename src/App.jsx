@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { NavBar } from './components/Navbar'
-import { Banner } from './components/Banner'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import { NavBar } from './components/Navbar'
+import { Banner } from './components/Banner'
+import { Skills } from './components/Skills';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Banner />
+      <Skills />
     </div>
   )
 }
