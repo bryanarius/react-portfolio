@@ -49,12 +49,13 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <TrackVisibility>
-                            <div className="{isVisible ?}">
+                        {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                 <span className="tagline">Welcome to my Portfolio</span>
                                 <h1>{`Hi I'm Bryan `}<span className="wrap">{text}</span></h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra aliquet eget sit amet tellus cras. Scelerisque felis imperdiet proin fermentum.</p>
+                                <p>From the moment I produced "Hello World" in the console of my first application, I knew I was hooked into the world of software development.it's offered an engaging challenge to continually learn and improve my skills in creating high-quality software. What started with a simple "Hello World" has become a full-fledged passion that only gets more exciting as the years go by.</p>
                                 <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
-                            </div>
+                            </div>}
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>

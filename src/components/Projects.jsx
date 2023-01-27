@@ -1,9 +1,11 @@
 import {Col, Row, Container, Nav, Tab } from "react-bootstrap";
-import {ProjectCard} from "./ProjectCard"
-import projImg1 from "../assets/img/project-img1.png"
-import projImg2 from "../assets/img/project-img2.png"
-import projImg3 from "../assets/img/project-img3.png"
-import colorSharp2 from "../assets/img/color-sharp2.png"
+import {ProjectCard} from "./ProjectCard";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
+import projImg3 from "../assets/img/project-img3.png";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
 
@@ -23,14 +25,35 @@ export const Projects = () => {
             description: "Design & Development",
             imgUrl: projImg3,
         },
+        {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: projImg1,
+        },
+        {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: projImg2,
+        },
+        {
+            title: "Business Startup",
+            description: "Design & Development",
+            imgUrl: projImg3,
+        },
     ]
     return (
-    <section ClassName="project" id="project">
+    <section className="project" id="project">
         <Container>
             <Row>
-                <Col size={12}>
-                    <h2>Projects</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <Col>
+                <TrackVisibility>
+                    {({ isVisible }) =>
+                    <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+                        <h2>Projects</h2>
+                        <p>Below you'll find projects I've completed that showcase my skills and general background in developing software.</p>
+                    </div>}
+                </TrackVisibility>
+
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab" defaultActiveKey="/home">
                             <Nav.Item>
